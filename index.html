@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книги</title>
+    <style>
+    body{
+        margin: 0px;
+        background: url("https://img.freepik.com/free-photo/library-with-round-window-bookcase-with-bookcase-left_188544-9023.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+</head>
+<body>
+{% for book in books %}
+    <div>
+        <h2><a href="{{ url_for('book', book_id=book.id) }}">{{ book.title }}</a></h2>
+    </div>
+{% endfor %}
+
+</body>
+</html>
